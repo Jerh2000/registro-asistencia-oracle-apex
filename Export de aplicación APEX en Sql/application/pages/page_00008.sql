@@ -1,0 +1,222 @@
+prompt --application/pages/page_00008
+begin
+--   Manifest
+--     PAGE: 00008
+--   Manifest End
+wwv_flow_imp.component_begin (
+ p_version_yyyy_mm_dd=>'2024.11.30'
+,p_release=>'24.2.8'
+,p_default_workspace_id=>99494367163597025604
+,p_default_application_id=>282405
+,p_default_id_offset=>0
+,p_default_owner=>'WKSP_JERH2000'
+);
+wwv_flow_imp_page.create_page(
+ p_id=>8
+,p_name=>'Registro de Asistencia'
+,p_alias=>'REGISTRO-DE-ASISTENCIA'
+,p_step_title=>'Registro de Asistencia'
+,p_autocomplete_on_off=>'OFF'
+,p_page_template_options=>'#DEFAULT#'
+,p_protection_level=>'C'
+,p_page_component_map=>'18'
+,p_created_on=>wwv_flow_imp.dz('20251019215426Z')
+,p_last_updated_on=>wwv_flow_imp.dz('20251019220904Z')
+,p_created_by=>'JAIRO142014@HOTMAIL.COM'
+,p_last_updated_by=>'JAIRO142014@HOTMAIL.COM'
+);
+wwv_flow_imp_page.create_page_plug(
+ p_id=>wwv_flow_imp.id(99504032682107081281)
+,p_plug_name=>'Registro de Asistencia'
+,p_region_template_options=>'#DEFAULT#:t-IRR-region--hideHeader js-addHiddenHeadingRoleDesc'
+,p_plug_template=>2100526641005906379
+,p_plug_display_sequence=>10
+,p_query_type=>'TABLE'
+,p_query_table=>'ASISTENCIA'
+,p_include_rowid_column=>false
+,p_plug_source_type=>'NATIVE_IR'
+,p_prn_page_header=>'Registro de Asistencia'
+,p_created_on=>wwv_flow_imp.dz('20251019215426Z')
+,p_updated_on=>wwv_flow_imp.dz('20251019220904Z')
+,p_created_by=>'JAIRO142014@HOTMAIL.COM'
+,p_updated_by=>'JAIRO142014@HOTMAIL.COM'
+);
+wwv_flow_imp_page.create_worksheet(
+ p_id=>wwv_flow_imp.id(99504032776198081281)
+,p_name=>'Registro de Asistencia'
+,p_max_row_count_message=>'The maximum row count for this report is #MAX_ROW_COUNT# rows.  Please apply a filter to reduce the number of records in your query.'
+,p_no_data_found_message=>'No data found.'
+,p_base_pk1=>'ID_ASIST'
+,p_pagination_type=>'ROWS_X_TO_Y'
+,p_pagination_display_pos=>'BOTTOM_RIGHT'
+,p_report_list_mode=>'TABS'
+,p_lazy_loading=>false
+,p_show_detail_link=>'C'
+,p_show_notify=>'Y'
+,p_download_formats=>'CSV:HTML:XLSX:PDF'
+,p_enable_mail_download=>'Y'
+,p_detail_link=>'f?p=&APP_ID.:9:&APP_SESSION.::&DEBUG.:RP:P9_ID_ASIST:\#ID_ASIST#\'
+,p_detail_link_text=>'<span role="img" aria-label="Edit" class="fa fa-edit" title="Edit"></span>'
+,p_owner=>'JAIRO142014@HOTMAIL.COM'
+,p_internal_uid=>99504032776198081281
+,p_created_on=>wwv_flow_imp.dz('20251019215426Z')
+,p_updated_on=>wwv_flow_imp.dz('20251019220904Z')
+,p_created_by=>'JAIRO142014@HOTMAIL.COM'
+,p_updated_by=>'JAIRO142014@HOTMAIL.COM'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(99504033494480081282)
+,p_db_column_name=>'ID_ASIST'
+,p_display_order=>0
+,p_is_primary_key=>'Y'
+,p_column_identifier=>'A'
+,p_column_label=>'Id Asist'
+,p_column_type=>'NUMBER'
+,p_display_text_as=>'HIDDEN_ESCAPE_SC'
+,p_heading_alignment=>'LEFT'
+,p_tz_dependent=>'N'
+,p_use_as_row_header=>'N'
+,p_created_on=>wwv_flow_imp.dz('20251019215426Z')
+,p_updated_on=>wwv_flow_imp.dz('20251019215426Z')
+,p_created_by=>'JAIRO142014@HOTMAIL.COM'
+,p_updated_by=>'JAIRO142014@HOTMAIL.COM'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(99504033843150081282)
+,p_db_column_name=>'ID_EST'
+,p_display_order=>2
+,p_column_identifier=>'B'
+,p_column_label=>'Estudiante'
+,p_column_type=>'STRING'
+,p_display_text_as=>'LOV_ESCAPE_SC'
+,p_heading_alignment=>'LEFT'
+,p_rpt_named_lov=>wwv_flow_imp.id(99503290262715352120)
+,p_use_as_row_header=>'N'
+,p_created_on=>wwv_flow_imp.dz('20251019215426Z')
+,p_updated_on=>wwv_flow_imp.dz('20251019220904Z')
+,p_created_by=>'JAIRO142014@HOTMAIL.COM'
+,p_updated_by=>'JAIRO142014@HOTMAIL.COM'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(99504034234851081283)
+,p_db_column_name=>'FECHA_ASIST'
+,p_display_order=>3
+,p_column_identifier=>'C'
+,p_column_label=>'Fecha Asist'
+,p_column_type=>'DATE'
+,p_heading_alignment=>'LEFT'
+,p_format_mask=>'DD-MON-YYYY'
+,p_tz_dependent=>'N'
+,p_use_as_row_header=>'N'
+,p_created_on=>wwv_flow_imp.dz('20251019215426Z')
+,p_updated_on=>wwv_flow_imp.dz('20251019220311Z')
+,p_created_by=>'JAIRO142014@HOTMAIL.COM'
+,p_updated_by=>'JAIRO142014@HOTMAIL.COM'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(99504034637622081283)
+,p_db_column_name=>'ESTADO'
+,p_display_order=>4
+,p_column_identifier=>'D'
+,p_column_label=>'Estado'
+,p_column_type=>'STRING'
+,p_heading_alignment=>'LEFT'
+,p_tz_dependent=>'N'
+,p_use_as_row_header=>'N'
+,p_created_on=>wwv_flow_imp.dz('20251019215426Z')
+,p_updated_on=>wwv_flow_imp.dz('20251019215426Z')
+,p_created_by=>'JAIRO142014@HOTMAIL.COM'
+,p_updated_by=>'JAIRO142014@HOTMAIL.COM'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(99504035024193081283)
+,p_db_column_name=>'OBSERVACION'
+,p_display_order=>5
+,p_column_identifier=>'E'
+,p_column_label=>'Observacion'
+,p_column_type=>'STRING'
+,p_heading_alignment=>'LEFT'
+,p_tz_dependent=>'N'
+,p_use_as_row_header=>'N'
+,p_created_on=>wwv_flow_imp.dz('20251019215426Z')
+,p_updated_on=>wwv_flow_imp.dz('20251019215426Z')
+,p_created_by=>'JAIRO142014@HOTMAIL.COM'
+,p_updated_by=>'JAIRO142014@HOTMAIL.COM'
+);
+wwv_flow_imp_page.create_worksheet_rpt(
+ p_id=>wwv_flow_imp.id(99504053465450083947)
+,p_application_user=>'APXWS_DEFAULT'
+,p_report_seq=>10
+,p_report_alias=>'995040535'
+,p_status=>'PUBLIC'
+,p_is_default=>'Y'
+,p_report_columns=>'ID_ASIST:ID_EST:FECHA_ASIST:ESTADO:OBSERVACION'
+,p_created_on=>wwv_flow_imp.dz('20251019215453Z')
+,p_updated_on=>wwv_flow_imp.dz('20251019215453Z')
+,p_created_by=>'JAIRO142014@HOTMAIL.COM'
+,p_updated_by=>'JAIRO142014@HOTMAIL.COM'
+);
+wwv_flow_imp_page.create_page_plug(
+ p_id=>wwv_flow_imp.id(99504037197348081284)
+,p_plug_name=>'Breadcrumb'
+,p_region_template_options=>'#DEFAULT#:t-BreadcrumbRegion--useBreadcrumbTitle'
+,p_component_template_options=>'#DEFAULT#'
+,p_plug_template=>2531463326621247859
+,p_plug_display_sequence=>10
+,p_plug_display_point=>'REGION_POSITION_01'
+,p_menu_id=>wwv_flow_imp.id(99499985098943214177)
+,p_plug_source_type=>'NATIVE_BREADCRUMB'
+,p_menu_template_id=>4072363345357175094
+,p_created_on=>wwv_flow_imp.dz('20251019215426Z')
+,p_updated_on=>wwv_flow_imp.dz('20251019215426Z')
+,p_created_by=>'JAIRO142014@HOTMAIL.COM'
+,p_updated_by=>'JAIRO142014@HOTMAIL.COM'
+);
+wwv_flow_imp_page.create_page_button(
+ p_id=>wwv_flow_imp.id(99504035500325081283)
+,p_button_sequence=>10
+,p_button_plug_id=>wwv_flow_imp.id(99504032682107081281)
+,p_button_name=>'CREATE'
+,p_button_action=>'REDIRECT_PAGE'
+,p_button_template_options=>'#DEFAULT#'
+,p_button_template_id=>4072362960822175091
+,p_button_is_hot=>'Y'
+,p_button_image_alt=>'Create'
+,p_button_position=>'RIGHT_OF_IR_SEARCH_BAR'
+,p_button_redirect_url=>'f?p=&APP_ID.:9:&APP_SESSION.::&DEBUG.:9::'
+,p_created_on=>wwv_flow_imp.dz('20251019215426Z')
+,p_updated_on=>wwv_flow_imp.dz('20251019215426Z')
+,p_created_by=>'JAIRO142014@HOTMAIL.COM'
+,p_updated_by=>'JAIRO142014@HOTMAIL.COM'
+);
+wwv_flow_imp_page.create_page_da_event(
+ p_id=>wwv_flow_imp.id(99504035886714081284)
+,p_name=>'Edit Report - Dialog Closed'
+,p_event_sequence=>10
+,p_triggering_element_type=>'REGION'
+,p_triggering_region_id=>wwv_flow_imp.id(99504032682107081281)
+,p_bind_type=>'bind'
+,p_execution_type=>'IMMEDIATE'
+,p_bind_event_type=>'apexafterclosedialog'
+,p_created_on=>wwv_flow_imp.dz('20251019215426Z')
+,p_updated_on=>wwv_flow_imp.dz('20251019215426Z')
+,p_created_by=>'JAIRO142014@HOTMAIL.COM'
+,p_updated_by=>'JAIRO142014@HOTMAIL.COM'
+);
+wwv_flow_imp_page.create_page_da_action(
+ p_id=>wwv_flow_imp.id(99504036329485081284)
+,p_event_id=>wwv_flow_imp.id(99504035886714081284)
+,p_event_result=>'TRUE'
+,p_action_sequence=>10
+,p_execute_on_page_init=>'N'
+,p_action=>'NATIVE_REFRESH'
+,p_affected_elements_type=>'REGION'
+,p_affected_region_id=>wwv_flow_imp.id(99504032682107081281)
+,p_created_on=>wwv_flow_imp.dz('20251019215426Z')
+,p_updated_on=>wwv_flow_imp.dz('20251019215426Z')
+,p_created_by=>'JAIRO142014@HOTMAIL.COM'
+,p_updated_by=>'JAIRO142014@HOTMAIL.COM'
+);
+wwv_flow_imp.component_end;
+end;
+/
